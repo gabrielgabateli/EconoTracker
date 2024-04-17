@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EconoTracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💵</text></svg>">
+    <script src="js/cadastrar.js" defer></script>
+</head>
+<body>
+    <div class="is-flex is-justify-content-space-between is-align-items-center flex-column-mobile">
+
+        <div class="has-text-centered">
+          <h1 class="title is-1-desktop is-2-tablet is-3-mobile has-text-warning-light even-bigger margin-big">EconoTracker</h1>
+        </div>
+
+    </div>
+
+    <form class="box">
+        <div class="field">
+          <h2 class="subtitle is-5 has-text-weight-semibold">Cadastrar gasto</h2>
+          <label class="label">Nome</label>
+          <div class="control">
+            <input id="nome" class="input" type="email" placeholder="e.g. Academia, Mercado" />
+          </div>
+          <span id="nome-erro" class="has-text-danger"></span>
+        </div>
+      
+        <div class="field">
+            <label class="label">Descrição</label>
+            <div class="control">
+              <input id="descricao" class="input" type="email" placeholder="Plano SmartFit, Compras mensais..." />
+            </div>
+            <span id="descricao-erro" class="has-text-danger"></span>
+          </div>
+
+        <div class="field">
+          <label class="label">Valor</label>
+          <div class="control">
+            <input id="valor" class="input" type="text" placeholder="R$" />
+          </div>
+          <span id="valor-erro" class="has-text-danger"></span>
+        </div>
+      
+        <div class="columns is-variable is-4">
+            <div class="column is-3">
+                <button id="botao-cadastrar" type="button" class="button is-primary margin-right">Cadastrar</button>
+                <a href="index.html" class="button is-danger">Cancelar</a>
+            </div>
+        </div>
+
+      </form>
+</body>
