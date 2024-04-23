@@ -17,7 +17,7 @@ document.querySelector("#botao-cadastrar").addEventListener("click", () => {
 })
 
 function validar(tarefa) {
-    limparErros ()
+    // limparErros ()
 
     if (tarefa.nome.trim() == "") {
         document.querySelector("#nome").classList.add("is-danger")
@@ -39,7 +39,7 @@ function validar(tarefa) {
 
 }
 
-function limparErros () {
-    // tem que iterar sobre o array que o querySelectorAll retorna
-    document.querySelectorAll("input .is-danger, span .is-danger").classList.remove("is-danger")
-}
+// function limparErros () {
+//     // tem que iterar sobre o array que o querySelectorAll retorna
+//     document.querySelectorAll("input .is-danger, span .is-danger").classList.remove("is-danger")
+// }
