@@ -7,10 +7,10 @@ function card (tarefa) {
     // fugindo do grid
     const cardTarefa = `
     <div class="column is-3 has-text-centered">
-    <h3 class="title is-4 has-text-white-ter">Academia</h3>
-    <p class="has-text-weight-bold has-text-centered has-text-grey-lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem minus, reiciendis deserunt nam ducimus quisquam asperiores molestias, laborum aspernatur laudantium deleniti doloremque provident saepe quod et nulla totam, accusamus aut?</p>
+    <h3 class="title is-4 has-text-white-ter">${tarefa.nome}</h3>
+    <p class="has-text-weight-bold has-text-centered has-text-grey-lighter">${tarefa.descricao}</p>
     <br>
-    <p class="has-text-weight-bold has-text-centered has-text-danger">R$ 100</p>
+    <p class="has-text-weight-bold has-text-centered has-text-danger">R$ ${tarefa.valor}</p>
     </div>
      `
 
