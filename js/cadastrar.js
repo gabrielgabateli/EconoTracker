@@ -12,12 +12,20 @@ document.querySelector("#botao-cadastrar").addEventListener("click", () => {
     
     validar(tarefa)
     
+    salvar(tarefa)
     
     console.log('Cadastrado')    
 })
 
+function salvar(tarefa) {
+    const tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
+    tarefas.push(tarefa)
+    localStorage.setItem("tarefas", JSON.stringify(tarefas)) 
+}
+
+
 function validar(tarefa) {
-    // limparErros ()
+    limparErros ()
 
     if (tarefa.nome.trim() == "") {
         document.querySelector("#nome").classList.add("is-danger")
@@ -39,7 +47,12 @@ function validar(tarefa) {
 
 }
 
-// function limparErros () {
-//     // tem que iterar sobre o array que o querySelectorAll retorna
-//     document.querySelectorAll("input .is-danger, span .is-danger").classList.remove("is-danger")
-// }
+function limparErros () {
+
+    const campos = document.querySelectorAll("input.is-danger, span.is-danger")
+    console.log(campos)
+  
+    campos.forEach((input) => {input.classList.remove("is-danger")})
+
+    document.querySelectorAll("span.has-text-danger").forEach((span) => { span.innerText = ""})
+}
