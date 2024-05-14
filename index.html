@@ -8,6 +8,8 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💵</text></svg>">
     <script src="./js/carregar.js" defer></script>
     <script src="./js/apagar.js" defer></script>
+    <script src="./js/reset.js" defer></script>
+    <script src="./js/gastomax.js" defer></script>
 </head>
 <body>
 
@@ -24,12 +26,12 @@
     
     <div class="box is-align-items-center">
       <h2 class="subtitle is-5 has-text-weight-semibold has-text-centered">Total gasto no mês:</h2>
-      <p class="has-text-weight-bold has-text-centered has-text-warning mb-2">R$ 400</p>
-      <progress id='barra-progresso' class="progress is-small is-warning" value="40" max="100">15%</progress>
+      <p id ='valor-paragrafo'class="has-text-weight-bold has-text-centered has-text-warning mb-2">R$ 0</p>
+      <progress id='barra-progresso' class="progress is-small is-warning" value="0" max="100"></progress>
       
       <div class="buttons is-centered mt-3">
-        <a class="button is-info is-size-6">Gasto Máximo</a>
-        <a class="button is-danger is-size-6 ">Reset</a>
+        <a id='gasto-maximo' class="button is-info is-size-6">Gasto Máximo</a>
+        <a id='botao-reset' class="button is-danger is-size-6 ">Reset</a>
       </div>
     </div>
     

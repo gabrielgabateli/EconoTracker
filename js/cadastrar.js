@@ -69,25 +69,18 @@ function limparErros () {
 }
 
 function atualizarBarra() {
-    // Seleciona o elemento de entrada do tipo email
     const inputEmail = document.getElementById('valorEmail');
 
-    // Seleciona o elemento <progress> pelo ID
     const progressBar = document.getElementById('barra-progresso');
 
-    // Adiciona um ouvinte de evento de mudança de entrada
     inputEmail.addEventListener('change', function() {
-        // Obtém o valor digitado pelo usuário
-        const novoValor = parseFloat(inputEmail.value); // Converte para número
+        const novoValor = parseFloat(inputEmail.value)
 
-        // Verifica se o valor é válido
         if (!isNaN(novoValor) && novoValor >= 0 && novoValor <= 100) {
-            // Atualiza o valor do progresso
-            progressBar.value = novoValor;
+            progressBar.value = novoValor
         } else {
-            alert('Por favor, insira um valor entre 0 e 100.');
+            alert('Por favor, insira um valor entre 0 e 100.')
         }
     });
 }
 
-// Chama a função para inicializar o ouvinte de eventos
